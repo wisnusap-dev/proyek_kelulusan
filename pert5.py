@@ -8,6 +8,15 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, classification_report, confusion_matrix, roc_auc_score, roc_curve
 import matplotlib.pyplot as plt
+import pandas as pd
+
+X_train = pd.read_csv("data/X_train.csv")
+X_val   = pd.read_csv("data/X_val.csv")
+X_test  = pd.read_csv("data/X_test.csv")
+y_train = pd.read_csv("data/y_train.csv").squeeze("columns")
+y_val   = pd.read_csv("data/y_val.csv").squeeze("columns")
+y_test  = pd.read_csv("data/y_test.csv").squeeze("columns")
+
 
 # === 1. BACA DATA ===
 df = pd.read_csv("kelulusan_mahasiswa.csv")
