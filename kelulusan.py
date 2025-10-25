@@ -56,3 +56,10 @@ X_val, X_test, y_val, y_test = train_test_split(
 print("Train shape:", X_train.shape)
 print("Validation shape:", X_val.shape)
 print("Test shape:", X_test.shape)
+
+X_train.to_csv("X_train.csv", index=False)
+X_val.to_csv("X_val.csv", index=False)
+X_test.to_csv("X_test.csv", index=False)
+y_train.to_csv("y_train.csv", index=False)
+y_val.to_csv("y_val.csv", index=False)
+y_test.to_csv("y_test.csv", index=False)
